@@ -1,0 +1,45 @@
+<h3>{{viewTitle}}</h3>
+
+<form class="form-horizontal" action="/employee2" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{employee._id}}">
+    <div class="form-group">
+        <label>DPI</label>
+        <input type="ticketnumber" min="1" max="13" class="form-control" name="DPI" placeholder="DPI" value="{{employee2.DPI}}">
+        <div class="text-danger">
+            {{employee.DPIError}}</div>
+    </div>
+    {{!-- Mitades Nombre--}}
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Nombre</label>
+        <input type="text" class="form-control" name="Nombre" placeholder="Nombre" value="{{employee2.Nombre}}">
+        <div class="text-danger">
+            {{employee.NombreError}}</div>
+        </div>
+        <div class="form-group col-md-6">
+             <label>Puesto</label>
+            <input type="text" class="form-control" name="Puesto" placeholder="Puesto" value="{{employee2.Puesto}}">
+        </div>
+    </div>
+    {{!-- Mitades Casada y Nac--}}
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Lugar</label>
+        <input type="text" class="form-control" name="Lugar" placeholder="Lugar" value="{{employee2.Lugar}}">        
+        </div>
+        <div class="form-group col-md-6">
+            <label>Fecha Ingreso</label>
+        <input type="date" class="form-control" name="FechaIngreso" placeholder="Fecha Ingreso" value="{{employee2.FechaIngreso}}">
+        </div>
+    </div>
+     <div class="form-group">
+        <label>Teléfono</label>
+        <input type="ticketnumber" min="1" max="8" class="form-control" name="Telefono" placeholder="Telefono" value="{{employee2.Telefono}}">
+        <div class="text-danger">
+            {{employee.DPIError}}</div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/employee2/list"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+</form>

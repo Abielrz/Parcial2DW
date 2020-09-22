@@ -1,0 +1,98 @@
+<h3>{{viewTitle}}</h3>
+
+<form class="form-horizontal" action="/employee" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{employee._id}}">
+    <div class="form-group">
+        <label>DPI</label>
+        <input type="ticketnumber" min="1" max="13" class="form-control" name="DPI" placeholder="DPI" value="{{employee.DPI}}">
+        <div class="text-danger">
+            {{employee.DPIError}}</div>
+    </div>
+    {{!-- Mitades Nombre--}}
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Primer Nombre</label>
+        <input type="text" class="form-control" name="PrimerNombre" placeholder="Primer Nombre" value="{{employee.PrimerNombre}}">
+        <div class="text-danger">
+            {{employee.PrimerNombreError}}</div>
+        </div>
+        <div class="form-group col-md-6">
+             <label>Segundo Nombre</label>
+            <input type="text" class="form-control" name="SegundoNombre" placeholder="Segundo Nombre" value="{{employee.SegundoNombre}}">
+        </div>
+    </div>
+    {{!-- Mitades Apellido--}}
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Primer Apellido</label>
+        <input type="text" class="form-control" name="PrimerApellido" placeholder="Primer Apellido" value="{{employee.PrimerApellido}}">
+        <div class="text-danger">
+            {{employee.PrimerApellidoError}}</div>
+        </div>
+        <div class="form-group col-md-6">
+            <label>Segundo Apellido</label>
+        <input type="text" class="form-control" name="SegundoApellido" placeholder="Segundo Apellido" value="{{employee.SegundoApellido}}">
+        </div>
+    </div>
+    {{!-- Mitades Casada y Nac--}}
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Apellido Casada</label>
+        <input type="text" class="form-control" name="ApellidoCasada" placeholder="Apellido Casada" value="{{employee.ApellidoCasada}}">        
+        </div>
+        <div class="form-group col-md-6">
+            <label>Fecha Nacimiento</label>
+        <input type="date" class="form-control" name="FechaNac" placeholder="Fecha Nacimiento" value="{{employee.FechaNac}}">
+        <div class="text-danger">
+            {{employee.PrimerApellidoError}}</div>
+        </div>
+    </div>
+    {{!-- Mitades Puesto--}}
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Puesto Nominal</label>
+        <input type="text" class="form-control" name="PuestoNominal" placeholder="Puesto Nominal" value="{{employee.PuestoNominal}}">
+        <div class="text-danger">
+            {{employee.PuestoNominalError}}</div>
+    
+        </div>
+        <div class="form-group col-md-6">
+            <label>Puesto Funcional</label>
+        <input type="text" class="form-control" name="PuestoFuncional" placeholder="PuestoFuncional" value="{{employee.PuestoFuncional}}">
+        <div class="text-danger">
+            {{employee.PuestoFuncionalError}}</div>
+        </div>
+    </div>
+     {{!--Mitades Email--}}
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Email Institucional</label>
+        <input type="email" class="form-control" name="EmailInst" placeholder="Email Institucional" value="{{employee.EmailInst}}">
+        <div class="text-danger">
+            {{employee.EmailInstError}}</div>
+        </div>
+        <div class="form-group col-md-6">
+             <label>Email Personal</label>
+        <input type="email" class="form-control" name="EmailPer" placeholder="Email Personal" value="{{employee.EmailPersonal}}">
+        <div class="text-danger">
+            {{employee.EmailPerError}}</div>
+        </div>
+    </div>
+    {{!--Mitades Tel--}}
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Teléfono Casa</label>
+            <input type="tel" class="form-control" name="TelCasa" placeholder="Teléfono Casa" value="{{employee.TelCasa}}">
+        <div class="text-danger">
+            {{employee.TelCasaError}}</div>
+        </div>
+        <div class="form-group col-md-6">
+              <label>Teléfono Personal</label>
+            <input type="tel" class="form-control" name="TelCel" placeholder="Teléfono Personal" value="{{employee.TelCel}}">
+            {{employee.TelCelError}}</div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/employee/list"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+</form>

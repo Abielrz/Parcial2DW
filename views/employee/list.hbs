@@ -1,0 +1,35 @@
+<h5><a class="btn btn-secondary" href="/employee"><i class="fa fa-plus"></i> Crear Nuevo</a> Lista de Empleados</h5>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>DPI</th>
+            <th>Nombre</th>
+            <th>Fecha Nacimiento</th>
+            <th>Puesto Nominal</th>
+            <th>Puesto Funcional</th>
+            <th>Email Institucional</th>
+            <th>Email Personal</th>
+            <th>Teléfono Casa</th>
+            <th>Teléfono Personal</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.DPI}}</td>
+            <td>{{this.PrimerNombre}}</td>
+            <td>{{this.FechaNac}}</td>
+            <td>{{this.PuestoNominal}}</td>
+            <td>{{this.PuestoFuncional}}</td>
+            <td>{{this.EmailInst}}</td>
+            <td>{{this.EmailPer}}</td>
+            <td>{{this.TelCasa}}</td>
+            <td>{{this.TelCel}}</td>
+            <td>
+                <a href="/employee/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/employee/delete/{{this._id}}" onclick="return confirm('Estás seguro de eliminar este registro?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
